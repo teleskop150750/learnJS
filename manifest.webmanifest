@@ -9,7 +9,7 @@
   "start_url": "index.html",
   "scope": "https://teleskop150750.github.io/learnJS/",
   "icons": [{
-    "src": "images/favicon.ico",
+    "src": "favicon.ico",
     "sizes": "250x250"
   }]
 }
