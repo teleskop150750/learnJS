@@ -7,7 +7,7 @@
   "background_color": "#ffffff",
   "description": "Навигация по урокам.",
   "start_url": "index.html",
-  "scope": "https://teleskop150750.github.io/learnJS/",
+  "scope": "/",
   "icons": [{
     "src": "favicon.ico",
     "sizes": "250x250"
