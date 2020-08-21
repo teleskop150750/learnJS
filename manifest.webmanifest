@@ -1,0 +1,16 @@
+{
+  "lang": "ru",
+  "name": "Learn JavaScript",
+  "short_name": "learnJS",
+  "categories": "education",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Навигация по урокам.",
+  "scope": "./",
+  "start_url": "index.html",
+  "icons": [{
+    "src": "images/favicon.png",
+    "sizes": "250x250",
+    "type": "image/png"
+  }]
+}
