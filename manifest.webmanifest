@@ -6,8 +6,8 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "description": "Навигация по урокам.",
-  "scope": ".",
-  "start_url": "index.html",
+  "scope": "/app/",
+  "start_url": "app/index.html",
   "icons": [{
     "src": "images/favicon.png",
     "sizes": "250x250",
