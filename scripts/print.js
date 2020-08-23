@@ -22,38 +22,21 @@ export const printTasks = (arr) => {
   sectionTasks.append(h2);
 
   arr.forEach(({
-    title, paragraphs, imgName, preText,
+    imgName, preText,
   }) => {
     const divTask = document.createElement('div');
     divTask.classList.add('task');
-    const h3 = document.createElement('h3');
-    h3.classList.add('task__title');
-    h3.textContent = title;
-    const pFragment = document.createDocumentFragment();
-    paragraphs.forEach((paragraph) => {
-      const p = document.createElement('p');
-      p.textContent = paragraph;
-      pFragment.append(p);
-    });
 
-    let img;
-    if (imgName) {
-      img = document.createElement('img');
-      img.src = `./images/${imgName}.png`;
-      img.alt = imgName;
-    }
+    const img = document.createElement('img');
+    img.src = `./images/${imgName}.png`;
+    img.alt = imgName;
 
     let pre;
     if (preText) {
       pre = document.createElement('pre');
       pre.textContent = preText;
     }
-
-    divTask.append(h3);
-    divTask.append(pFragment);
-    if (imgName) {
-      divTask.append(img);
-    }
+    divTask.append(img);
     if (preText) {
       divTask.append(pre);
     }

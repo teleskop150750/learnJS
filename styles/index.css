@@ -37,6 +37,10 @@ pre {
   background-color: rgb(255, 255, 0);
 }
 
+.result{
+  margin-top: 1rem;
+}
+
 .home-link {
   align-self: center;
   padding: 0.8rem 1.2rem;
