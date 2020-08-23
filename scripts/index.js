@@ -1,4 +1,4 @@
-export function printResult(result, i = 0) {
+export const printResult = (result, i = 0) => {
   const tasks = document.querySelectorAll('.task');
   const div = document.createElement('div');
   div.classList.add('result');
@@ -7,9 +7,9 @@ export function printResult(result, i = 0) {
   span.textContent = result;
   div.append(span);
   tasks[i].append(div);
-}
+};
 
-export default function printTasks(arr) {
+export const printTasks = (arr) => {
   const { body } = document;
   body.classList.add('page__body');
 
@@ -56,4 +56,4 @@ export default function printTasks(arr) {
   a.classList.add('home-link');
   sectionTasks.append(a);
   body.append(sectionTasks);
-}
+};
