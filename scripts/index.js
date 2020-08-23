@@ -1,4 +1,4 @@
-export const printResulp = (result, item) => {
+export function printResult(result, i = 0) {
   const tasks = document.querySelectorAll('.task');
   const div = document.createElement('div');
   div.classList.add('result');
@@ -6,10 +6,10 @@ export const printResulp = (result, item) => {
   span.classList.add('result__span');
   span.textContent = result;
   div.append(span);
-  tasks[item].append(div);
-};
+  tasks[i].append(div);
+}
 
-export const printTasks = (arr) => {
+export default function printTasks(arr) {
   const { body } = document;
   body.classList.add('page__body');
 
@@ -21,7 +21,7 @@ export const printTasks = (arr) => {
   h2.classList.add('tasks__title');
   sectionTasks.append(h2);
 
-  arr.forEach(({ title, paragraphs, imgName }) => {
+  arr.forEach(({ title, paragraphs, imgName = null }) => {
     const divTask = document.createElement('div');
     divTask.classList.add('task');
     const h3 = document.createElement('h3');
@@ -33,14 +33,20 @@ export const printTasks = (arr) => {
       p.textContent = paragraph;
       pFragment.append(p);
     });
-    const img = document.createElement('img');
-    img.src = `./images/${imgName}.png`;
-    console.log(img.src);
-    img.alt = imgName;
+
+    let img;
+    if (imgName) {
+      img = document.createElement('img');
+      img.src = `./images/${imgName}.png`;
+      console.log(img.src);
+      img.alt = imgName;
+    }
 
     divTask.append(h3);
     divTask.append(pFragment);
-    divTask.append(img);
+    if (imgName) {
+      divTask.append(img);
+    }
     sectionTasks.append(divTask);
   });
 
@@ -50,4 +56,4 @@ export const printTasks = (arr) => {
   a.classList.add('home-link');
   sectionTasks.append(a);
   body.append(sectionTasks);
-};
+}

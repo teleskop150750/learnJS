@@ -1,5 +1,5 @@
 (async () => {
-  const { printResulp, printTasks } = await import('/scripts/index.js');
+  const { printResult, printTasks } = await import('/scripts/index.js');
 
   const tasks = [
     {
@@ -14,6 +14,5 @@
 
   printTasks(tasks);
 
-  printResulp('34', 0);
-  printResulp('Пока', 2);
+  printResult('34', 0);
 })();
