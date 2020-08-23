@@ -1,3 +1,40 @@
-html {
+.page__body {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  margin: 0;
+  background-color: rgb(243, 243, 243);
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  padding: 0 15px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.task {
+  padding: 1rem;
+  margin-bottom: 0.8em;
+  background-color: #ffffff;
+}
+
+.result__span {
+  display: inline-block;
+  min-width: 90px;
+  padding: 0.3rem;
+  text-align: center;
+  background-color: rgb(255, 255, 0);
+}
+
+.home-link {
+  align-self: center;
+  padding: 0.8rem 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #fd9460;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: #fff;
 }
