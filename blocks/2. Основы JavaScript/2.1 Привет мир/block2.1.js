@@ -1,5 +1,5 @@
 (async () => {
-  const { printResult, printTasks } = await import('/scripts/index.js');
+  const { printResult, printTasks } = await import('/scripts/print.js');
 
   const tasks = [
     {
