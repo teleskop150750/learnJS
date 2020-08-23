@@ -20,6 +20,15 @@
   background-color: #ffffff;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
 .result__span {
   display: inline-block;
   min-width: 90px;

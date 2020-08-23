@@ -21,7 +21,9 @@ export const printTasks = (arr) => {
   h2.classList.add('tasks__title');
   sectionTasks.append(h2);
 
-  arr.forEach(({ title, paragraphs, imgName = null }) => {
+  arr.forEach(({
+    title, paragraphs, imgName, preText,
+  }) => {
     const divTask = document.createElement('div');
     divTask.classList.add('task');
     const h3 = document.createElement('h3');
@@ -38,14 +40,22 @@ export const printTasks = (arr) => {
     if (imgName) {
       img = document.createElement('img');
       img.src = `./images/${imgName}.png`;
-      console.log(img.src);
       img.alt = imgName;
+    }
+
+    let pre;
+    if (preText) {
+      pre = document.createElement('pre');
+      pre.textContent = preText;
     }
 
     divTask.append(h3);
     divTask.append(pFragment);
     if (imgName) {
       divTask.append(img);
+    }
+    if (preText) {
+      divTask.append(pre);
     }
     sectionTasks.append(divTask);
   });
